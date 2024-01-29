@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #3D3D3D;
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  flex-direction: column;
+  color: #FAFAFA;
+}
+
+.title {
+  margin: 20px;
+  letter-spacing: 2px;
+}
+
+.subtext {
+  color: #BFBFBF;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.game-board {
+  display: inline-grid;
+  padding: 10px;
+  grid-template-columns: repeat(var(--size), 60px);
+  grid-template-rows: repeat(var(--size), 60px);
+  gap: 4px;
+  background-color: #747474;
+}
+
+.game-board > * {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FAFAFA;
+  border: 2px solid #AEAEAE;
+  user-select: none;
+}
+
+.game-board > [data-status="hidden"] {
+  background-color: #C8C8C8;
+  cursor: pointer;
+}
+
+.game-board > [data-status="mine"] {
+  background-color: #C40000;
+}
+
+.game-board > [data-status="number"] {
+  background-color: none;
+}
+
+.game-board > [data-status="marked"] {
+  background-color: #FFEA00;
+}
