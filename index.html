@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/styles.css">
-  <script defer src="./app.js"></script>
+  <script defer type="module" src="./js/app.js"></script>
   <title>Minesweeper</title>
 </head>
 <body>
   <h2 class="title">Minesweeper</h2>
   <div class="subtext">
-    Mines Left: 10
+    Mines Left: <span data-mine-count></span>
   </div>
   <div class="game-board"></div>
 </body>
